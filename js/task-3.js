@@ -6,5 +6,5 @@ inputEl.classList.add("input-js");
 titleEl.classList.add("title-js");
 
 inputEl.addEventListener("input", function (event) {
-  spanEl.textContent = event.target.value.trim() || "Anonimous";
+  spanEl.textContent = event.target.value.trim() || "Anonymous";
 });
