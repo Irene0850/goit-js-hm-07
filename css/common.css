@@ -198,6 +198,7 @@ li {
 /* TASK 6 */
 
 .input-quantity-js {
+  text-align: center;
   border: 1px solid #808080;
   border-radius: 8px;
   padding: 8px 72px;
