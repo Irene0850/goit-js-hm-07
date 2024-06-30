@@ -16,8 +16,8 @@ inputPasswordEl.style.height = "40px";
 formEl.addEventListener("submit", function (event) {
   event.preventDefault();
 
-  const emailValue = inputEmailEl.ariaValueMax.trim();
-  const passwordValue = inputPasswordEl.ariaValueMax.trim();
+  const emailValue = inputEmailEl.value.trim();
+  const passwordValue = inputPasswordEl.value.trim();
 
   if (emailValue === "" || passwordValue === "") {
     alert("All form fields must be filled in");

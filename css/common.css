@@ -157,6 +157,10 @@ li {
   letter-spacing: 0.04em;
 }
 
+.btn-js:hover {
+  background-color: #6c8cff;
+}
+
 /* TASK 5 */
 
 .widget {
@@ -229,6 +233,10 @@ li {
   color: #fff;
 }
 
+.button-create:hover {
+  background-color: #6c8cff;
+}
+
 .button-destroy-js {
   cursor: pointer;
   border: none;
@@ -237,6 +245,17 @@ li {
   width: 120px;
   height: 40px;
   background-color: #ff4e4e;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.button-destroy-js:hover {
+  background-color: #ff7070;
 }
 
 #controls {
@@ -249,7 +268,13 @@ li {
 
 #boxes {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
   gap: 44px;
+  /* justify-content: center; */
+  flex-wrap: wrap;
+  margin-top: 16px;
+  border-radius: 8px;
+  padding: 32px;
+  width: 486px;
+  height: 134px;
+  background-color: #f6f6fe;
 }
