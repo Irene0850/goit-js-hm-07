@@ -113,3 +113,67 @@ li {
   letter-spacing: 0.04em;
   color: #2e2f42;
 }
+
+/* TASK 4 */
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  border-radius: 8px;
+  padding: 24px;
+  width: 408px;
+  height: 256px;
+  background-color: #fff;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.label-js {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.btn-js {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 86px;
+  height: 40px;
+  background-color: #4e75ff;
+  color: #fff;
+  border: none;
+  margin-top: 8px;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+/* TASK 5 */
+
+.widget {
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 8px;
+  padding: 100px 88px;
+  width: 345px;
+  height: 280px;
+  background-color: #fff;
+}
+
+.color {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
