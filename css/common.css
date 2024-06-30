@@ -205,7 +205,7 @@ li {
   text-align: center;
   border: 1px solid #808080;
   border-radius: 8px;
-  padding: 8px 72px;
+  padding: 8px;
   width: 150px;
   height: 40px;
 
@@ -269,7 +269,6 @@ li {
 #boxes {
   display: flex;
   gap: 44px;
-  /* justify-content: center; */
   flex-wrap: wrap;
   margin-top: 16px;
   border-radius: 8px;
