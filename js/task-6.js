@@ -1,40 +1,39 @@
-const inputQuantity = document.querySelector("#controls input");
-const buttonCreate = document.querySelector("[data-create]");
-const buttonDestroy = document.querySelector("[data-destroy]");
-const containerForEl = document.querySelector("#boxes");
+const refs = {
+  inputQuantity: document.querySelector("#controls input"),
+  buttonCreate: document.querySelector("button[data-create]"),
+  buttonDestroy: document.querySelector("button[data-destroy]"),
+  containerForEl: document.querySelector("#boxes"),
+};
 
-inputQuantity.classList.add("input-quantity-js");
-buttonCreate.classList.add("button-create");
-buttonDestroy.classList.add("button-destroy-js");
+refs.buttonCreate.addEventListener("click", onCreateClick);
+refs.buttonDestroy.addEventListener("click", onDestroyClick);
+function onCreateClick() {
+  const amount = refs.inputQuantity.value;
+  const value = Number(amount);
 
+  if (amount < 1 || amount > 100) {
+    return alert(
+      "Ooops, something go wrong!!! The value must be less than 100"
+    );
+  }
+  onDestroyClick();
+  createBoxes(amount);
+}
+function onDestroyClick() {
+  refs.containerForEl.innerHTML = "";
+  refs.inputQuantity.value = "";
+}
+function createBoxes(amount) {
+  for (let i = 0; i < amount; i++) {
+    let elem = document.createElement("div");
+    elem.style.width = 30 + 10 * i + "px";
+    elem.style.height = 30 + 10 * i + "px";
+    elem.style.backgroundColor = getRandomHexColor();
+    refs.boxesEl.append(elem);
+  }
+}
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
     .toString(16)
     .padStart(6, 0)}`;
 }
-
-function createBoxes(amount) {
-  containerForEl.innerHTML = "";
-
-  for (let i = 0; i < amount; i++) {
-    const box = document.createElement("div");
-    box.style.width = `${30 + i * 10}px`;
-    box.style.height = `${30 + i * 10}px`;
-    box.style.backgroundColor = getRandomHexColor();
-    containerForEl.insertAdjacentHTML("beforeend", box.outerHTML);
-  }
-}
-
-buttonCreate.addEventListener("click", () => {
-  const amount = Number(inputQuantity.value);
-  if (amount >= 1 && amount <= 100) {
-    createBoxes(amount);
-    inputQuantity.value = "";
-  } else {
-    alert("Please enter a number between 1 and 100");
-  }
-});
-
-buttonDestroy.addEventListener("click", () => {
-  containerForEl.innerHTML = "";
-});
