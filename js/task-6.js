@@ -10,7 +10,7 @@ refs.buttonDestroy.addEventListener("click", onDestroyClick);
 
 function onCreateClick() {
   const amount = Number(refs.inputQuantity.value);
-  if (amount >= 1 || amount <= 100) {
+  if (amount >= 1 && amount <= 100) {
     createBoxes(amount);
     refs.inputQuantity.value = "";
   } else {
@@ -35,9 +35,7 @@ function createBoxes(amount) {
 }
 
 function onDestroyClick() {
-  while (refs.containerForEl.firstChild) {
-    refs.containerForEl.removeChild(refs.containerForEl.firstChild);
-  }
+  refs.containerForEl.innerHTML = "";
 }
 
 function getRandomHexColor() {
